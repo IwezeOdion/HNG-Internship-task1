@@ -13,26 +13,19 @@ function updateDateTime() {
 
   setInterval(updateDateTime, 1000);
 
-// function updateTime() {
-//     const clockElement = document.getElementById("currentUTCTime");
-//     const now = new Date();
+// function updateClock() {
+//   const currentTime = new Date();
+//   const options = { timeZone: 'Africa/Lagos', hour12: false };
+//   const watTime = currentTime.toLocaleTimeString('en-US', options);
+//   const watDate = currentTime.toLocaleDateString('en-US', { timeZone: 'Africa/Lagos' });
 
-//     // Convert to Nigeria Time (WAT)
-//     const nigeriaTime = new Date(now.getTime() + (60 * 60 * 1000)); // Add 1 hour
-
-//     const options = {
-//         weekday: "long",
-//         year: "numeric",
-//         month: "long",
-//         day: "numeric",
-//         hour: "2-digit",
-//         minute: "2-digit",
-//         second: "2-digit",
-//         timeZoneName: "short",
-//     };
-
-//     clockElement.textContent = nigeriaTime.toLocaleString("en-NG, options");
+//   const clockElement = document.getElementById('clock');
+//   clockElement.innerHTML = `Current Time in WAT: ${watTime} on ${watDate}`;
+//   clockElement.setAttribute('data-testid', 'currentUTCTime'); // Adding data-testid dynamically
 // }
 
-// updateTime();
-// setInterval(updateTime, 1000); //update every second
+// // Update the clock every second
+// setInterval(updateClock, 1000);
+
+// // Initial call to set the clock
+// updateClock();
