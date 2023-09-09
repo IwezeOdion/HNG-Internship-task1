@@ -24,13 +24,13 @@ function getCurrentDayOfWeek() {
 // "currentDayOfTheWeek" Element
 document.querySelector(
   '[data-testid="currentDayOfTheWeek"]'
-).textContent = `Current Day of the Week :  ${getCurrentDayOfWeek()}`;
+).textContent = ` ${getCurrentDayOfWeek()} `;
 
 //////////////////////////
 function getCurrentUTCTime() {
   const currentDate = new Date();
   const utcTimeString = currentDate.getTime();
-  UTCTime.textContent = `Current UTC Time: ${utcTimeString}`;
+  UTCTime.textContent = ` ${utcTimeString} UTC millisecond`;
   // return utcTimeString;
 }
 setInterval(getCurrentUTCTime, 1);
